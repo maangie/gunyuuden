@@ -23,6 +23,9 @@ Gemfile.lock
 # Node
 /node_modules/
 
+# Project local
+TODO.md
+
 # OS
 .DS_Store
 Thumbs.db
