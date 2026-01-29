@@ -24,12 +24,12 @@ class Content::PersonTest < ActiveSupport::TestCase
 
   test "related が配列で返る（複数の場合）" do
     person = Content::Person.find("oda-nobunaga")
-    assert_equal ["akechi-mitsuhide", "toyotomi-hideyoshi"], person.related
+    assert_equal [ "akechi-mitsuhide", "toyotomi-hideyoshi" ], person.related
   end
 
   test "related が配列で返る（単一の場合）" do
     person = Content::Person.find("akechi-mitsuhide")
-    assert_equal ["oda-nobunaga"], person.related
+    assert_equal [ "oda-nobunaga" ], person.related
   end
 
   test "all が全人物を返す" do
