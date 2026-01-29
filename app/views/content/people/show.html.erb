@@ -1,7 +1,17 @@
 <article>
   <h1>
-    <%= @resource.filename %>
+    <%= @resource.title %>
   </h1>
 
   <%= @resource.content %>
+
+  <% if @resource.related.present? %>
+    <h2>関連項目</h2>
+    <ul>
+      <% @resource.related.each do |slug| %>
+        <% person = Content::Person.find(slug) rescue nil %>
+        <li><%= link_to person&.title || slug, person_path(slug) %></li>
+      <% end %>
+    </ul>
+  <% end %>
 </article>
