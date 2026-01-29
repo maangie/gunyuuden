@@ -69,6 +69,6 @@ gem "perron", "~> 0.17.0"
 
 # Perron supports Markdown rendering using one of the following gems.
 # Uncomment your preferred choice and run `bundle install`
-# gem "commonmarker"
+gem "commonmarker"
 # gem "kramdown"
 # gem "redcarpet"
