@@ -3,7 +3,7 @@
     <%= @resource.title %>
   </h1>
 
-  <%= markdownify @resource.content %>
+  <%= markdownify @resource.content, process: [:target_blank] %>
 
   <% if @resource.related.present? %>
     <h2>関連項目</h2>
