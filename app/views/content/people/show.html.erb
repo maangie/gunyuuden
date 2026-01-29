@@ -3,7 +3,7 @@
     <%= @resource.title %>
   </h1>
 
-  <%= @resource.content %>
+  <%= markdownify @resource.content %>
 
   <% if @resource.related.present? %>
     <h2>関連項目</h2>
