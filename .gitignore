@@ -1,0 +1,39 @@
+# Ruby / Bundler
+/.bundle/
+/vendor/bundle
+Gemfile.lock
+
+# Rails
+/log/*
+/tmp/*
+/storage/*
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/assets
+/public/packs
+/public/packs-test
+
+# Environment
+/.env
+/.env.*
+!/.env.example
+/config/master.key
+/config/credentials/*.key
+
+# Node
+/node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Perron build output
+/build/
+/_site/
