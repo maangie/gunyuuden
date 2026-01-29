@@ -8,7 +8,7 @@
   <% if @resource.related.present? %>
     <h2>関連項目</h2>
     <ul>
-      <% @resource.related.each do |slug| %>
+      <% Array(@resource.related).each do |slug| %>
         <% person = Content::Person.find(slug) rescue nil %>
         <li><%= link_to person&.title || slug, person_path(slug) %></li>
       <% end %>
