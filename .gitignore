@@ -44,3 +44,4 @@ Thumbs.db
 # Perron build output
 /build/
 /_site/
+/output/
