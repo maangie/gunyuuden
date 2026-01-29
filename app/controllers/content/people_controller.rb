@@ -1,5 +1,4 @@
 class Content::PeopleController < ApplicationController
-
   def index
     @resources = Content::Person.all
   end
