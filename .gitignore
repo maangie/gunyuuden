@@ -12,16 +12,20 @@ Gemfile.lock
 /public/assets
 /public/packs
 /public/packs-test
+/config/*.key
+/config/credentials/*.key
+
+# Node
+/node_modules/
+
+# JS build output
+/app/assets/builds/*
+!/app/assets/builds/.keep
 
 # Environment
 /.env
 /.env.*
 !/.env.example
-/config/master.key
-/config/credentials/*.key
-
-# Node
-/node_modules/
 
 # Project local
 TODO.md
