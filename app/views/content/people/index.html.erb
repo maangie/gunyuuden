@@ -1,11 +1,11 @@
 <h1>
-  People
+  人物一覧
 </h1>
 
 <ul>
   <% @resources.each do |resource| %>
     <li>
-      <%= link_to resource.filename, resource %>
+      <%= link_to resource.title, resource %>
     </li>
   <% end %>
 </ul>
