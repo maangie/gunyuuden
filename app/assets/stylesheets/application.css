@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* 記事本文中の画像を右寄せフロートで表示 */
 .prose img {
   float: right;
   margin-left: 1rem;
