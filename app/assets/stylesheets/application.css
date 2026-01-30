@@ -1,2 +1,10 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+.prose img {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  max-width: 16rem;
+  border-radius: 0.25rem;
+}
