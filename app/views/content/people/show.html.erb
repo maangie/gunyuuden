@@ -11,7 +11,7 @@
     <h2>関連項目</h2>
     <ul>
       <% Array(@resource.related).each do |slug| %>
-        <% person = Content::Person.find(slug) rescue nil %>
+        <% person = Content::Person.all.find { it.slug == slug } %>
         <li><%= link_to person&.title || slug, person_path(slug) %></li>
       <% end %>
     </ul>
