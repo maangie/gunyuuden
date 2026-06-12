@@ -6,6 +6,6 @@ class Content::PeopleController < ApplicationController
 
   # : () -> void
   def show
-    @resource = Content::Person.find(params[:id])
+    @resource = Content::Person.find!(params[:id])
   end
 end
