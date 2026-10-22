@@ -17,7 +17,7 @@ frontmatter のメタデータによって相互接続し、
 * Markdown + frontmatter によるコンテンツ管理
 * メタデータを元にした自動リンク生成
 * 「時系列」ではなく「関係性」に基づくページ遷移設計
-* Netlify へのデプロイを前提としたCI/CD構成
+* GitHub Pages へのデプロイを前提としたCI/CD構成
 
 ---
 
@@ -47,10 +47,30 @@ related:
 * Ruby on Rails
 * Perron
 * Markdown
-* Netlify
+* GitHub Pages
 
 開発時は通常の Rails アプリとして動作させ、
 `bin/rails perron:build` により静的HTMLを生成する。
+
+---
+
+## 本番環境
+
+https://maangie.github.io/gunyuuden/
+
+`main` ブランチに push すると、GitHub Actions（`.github/workflows/pages.yml`）が
+次の手順で自動的にデプロイする。
+
+1. `yarn build:css` で CSS をビルドする
+2. `bin/rails perron:build` で静的サイトを `output/` に生成する
+3. HTML 内のルート絶対パス（`/...`）の先頭に `/gunyuuden/` を付ける
+4. `output/` を GitHub Pages にデプロイする
+
+プロジェクトサイトはリポジトリ名のサブディレクトリ配下で配信されるため、
+3 の書き換えが必要になる。
+
+手動で再デプロイする場合は、Actions の「GitHub Pages へデプロイ」を
+`workflow_dispatch` で実行する（`gh workflow run pages.yml`）。
 
 ---
 
