@@ -54,12 +54,6 @@ group :development do
   gem "pry-rails"
 end
 
-group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-end
-
 gem "perron", "~> 1.1.0"
 
 # Perron supports Markdown rendering using one of the following gems.
