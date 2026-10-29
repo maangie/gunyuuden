@@ -54,7 +54,7 @@ group :development do
   gem "pry-rails"
 end
 
-gem "perron", "~> 1.1.0"
+gem "perron", "~> 1.2.0"
 
 # Perron supports Markdown rendering using one of the following gems.
 # Uncomment your preferred choice and run `bundle install`
